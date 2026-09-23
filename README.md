@@ -205,6 +205,40 @@ fit, the call fails with `KnownFolder:E_InsufficientBuffer`.
 `KnownFolderPathW.inc` includes `KnownFolderPath.inc`, and both classes use the
 same `_KFPLinkMode_` and `_KFPDllMode_` settings.
 
+### Sharing code with older Clarion versions
+
+Compilers with `USTRING` support predefine `_USTRING_`. On older versions that
+symbol is undefined, and `COMPILE`/`OMIT` treat an undefined symbol as 0.
+`KnownFolderPathW.inc` and `KnownFolderPathW.clw` wrap everything that needs
+`USTRING` in `COMPILE(..., _USTRING_)`. You can therefore include them on any
+Clarion version: without Unicode support, `KnownFolderPathW` simply isn't
+declared.
+
+Code that uses `KnownFolderPathW` needs the same guard, and can fall back to
+the ANSI class:
+
+```clarion
+  COMPILE('_EndWide_', _USTRING_)
+FoldersW   KnownFolderPathW
+FolderPath USTRING(32767)
+! _EndWide_
+  OMIT('_EndAnsi_', _USTRING_)
+FoldersA   KnownFolderPath
+FolderPath CSTRING(32767)
+! _EndAnsi_
+
+  CODE
+  COMPILE('_EndWide2_', _USTRING_)
+  FoldersW.GetFolderW(KnownFolderNo:Documents, FolderPath)
+! _EndWide2_
+  OMIT('_EndAnsi2_', _USTRING_)
+  FoldersA.GetFolder(KnownFolderNo:Documents, FolderPath)
+! _EndAnsi2_
+```
+
+`KnownFolderPathTestW` does this. On a compiler without `USTRING` it still
+builds, and shows a message saying it needs the Unicode beta.
+
 ## Adding a folder
 
 1. In `KnownFolderPath.inc`, add a `KnownFolderNo:` equate with the next number,

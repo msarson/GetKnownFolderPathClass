@@ -2,6 +2,9 @@
 
   INCLUDE('KnownFolderPathW.inc'),ONCE
 
+! Everything below needs USTRING support; see KnownFolderPathW.inc.
+  COMPILE('_EndKnownFolderPathW_', _USTRING_)
+
 MAX_LONG_PATH EQUATE(32767)
 
   MAP
@@ -73,3 +76,4 @@ Chars LONG
   END
   lstrcpynW(FolderPath, WidePath, Chars + 1)
   RETURN KnownFolder:Success
+! _EndKnownFolderPathW_

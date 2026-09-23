@@ -7,6 +7,10 @@
 
   INCLUDE('KnownFolderPath.inc'),ONCE
 
+! Only compiled when the compiler supports USTRING (it predefines _USTRING_).
+! On older Clarion versions _USTRING_ is undefined, which counts as 0, so the
+! class is left out and this file can still be included.
+  COMPILE('_EndKnownFolderPathW_', _USTRING_)
 KnownFolderPathW CLASS(KnownFolderPath),TYPE,MODULE('KnownFolderPathW.clw'),LINK('KnownFolderPathW.clw',_KFPLinkMode_),DLL(_KFPDllMode_)
 Destruct             PROCEDURE,DERIVED
 GetFolderW           PROCEDURE(LONG FolderNo, *USTRING FolderPath, LONG Flags=0),LONG,PROC
@@ -15,3 +19,4 @@ GetPathW             PROCEDURE(LONG FolderNo, BOOL AddBackslash=FALSE, LONG Flag
 CopyWidePath         PROCEDURE(LONG WidePath, *USTRING FolderPath),LONG,PROTECTED
 PathBufferW          &USTRING,PRIVATE
                      END
+! _EndKnownFolderPathW_

@@ -5,6 +5,9 @@
   MAP
   END
 
+! The test needs USTRING support. On older Clarion versions _USTRING_ is
+! undefined, so only the short program at the end is compiled.
+  COMPILE('_EndUnicodeTest_', _USTRING_)
 ! One name per KnownFolder: equate, in equate order.
 FolderNames     GROUP
                   STRING('Desktop        ')
@@ -52,3 +55,9 @@ Folder          LONG
   END
   Report = Report & '|GetPathW with backslash: <9>' & Folders.GetPathW(KnownFolderNo:Downloads, TRUE)
   MESSAGE(Report, 'KnownFolderPathW test')
+! _EndUnicodeTest_
+
+  OMIT('_EndNoUnicodeTest_', _USTRING_)
+  CODE
+  MESSAGE('KnownFolderPathTestW needs a Clarion build with USTRING support (the Clarion 12 Unicode beta).', 'KnownFolderPathTestW')
+! _EndNoUnicodeTest_
