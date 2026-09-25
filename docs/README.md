@@ -57,11 +57,9 @@ Finaly check out the mapping of the old CSIDL to Known Folders (and the opposite
 | `CSIDL_STARTMENU`| `FOLDERID_StartMenu` |
 | `CSIDL_PERSONAL` | `FOLDERID_Documents` |
 
-| Known Folder       | Legacy CSIDL |
-| --- | --- |
-| `FOLDERID_Desktop` | `CSIDL_DESKTOP` |
-| *Duplicate*        | `CSIDL_DESKTOPDIRECTORY` |
-| `FOLDERID_Programs` | `CSIDL_PROGRAMS` |
-| `FOLDERID_StartMenu` | `CSIDL_STARTMENU` |
-| `FOLDERID_Documents` | `CSIDL_MYDOCUMENTS`
-| *Duplicate*          | `CSIDL_PERSONAL` |
+| Known Folder         | Legacy CSIDL       | Duplicate CSIDL |
+| --- | --- | --- |
+| `FOLDERID_Desktop`   | `CSIDL_DESKTOP`    |`CSIDL_DESKTOPDIRECTORY`|
+| `FOLDERID_Programs`  | `CSIDL_PROGRAMS`   |
+| `FOLDERID_StartMenu` | `CSIDL_STARTMENU`  |
+| `FOLDERID_Documents` | `CSIDL_MYDOCUMENTS`| `CSIDL_PERSONAL` |
