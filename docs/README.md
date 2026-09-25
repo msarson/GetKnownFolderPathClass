@@ -3,7 +3,7 @@
 
 The [Known Folder Table on MSDN](https://learn.microsoft.com/en-us/windows/win32/shell/knownfolderid) shows 100+ vertical tables of 7 items (Constant, Display Name, Folder Type, Default Path, CSIDL Equivalent, Legacy Display Name, Legacy Default Path)) for each of the 100+ Folder ID's. 
 
-Click on this link to view a [single markdown table transposed into colmums](MsdnKnownFoldFormatted.md) a sample of 4 rows appears below:
+Click on this link to view a [single markdown table transposed into colmums](MsdnKnownFoldFormatted.md) a sample of four rows appears below:
 
 | Constant           | Display Name| Folder Type | Default Path                                     | CSIDL Equivalent                       | Legacy Display Name | Legacy Default Path                |
 | :------------------| :-----------| :---------- | :------------------------------------------------| :--------------------------------------| :-------------------| :----------------------------------|
@@ -18,7 +18,7 @@ In this Repo Docs folder are two SDK files you can view:
 * [KnownFolders_SDK_81.h](KnownFolders_SDK_81.h) from the Windows SDK for Version 8.1 dated 9/14/2014
 * [KnownFolders_SDK_11.h](KnownFolders_SDK_81.h) from the Windows SDK for Version 11 (10.0.28000) dated 8/12/2026
 
-KnownFolders.h in the SDK has the code to define the ID's from the GUID's for C Code. It defines the ID's for use with this kind of code on 2 lines with a `\\comment` then macro with the GUID.
+KnownFolders.h in the SDK has the code to define the ID's from the GUID's for C Code. It defines the ID's for use with this kind of code on two lines with a `\\comment` then macro with the GUID.
 
 ```cpp
 // {B4BFCC3A-DB2C-424C-B029-7FE99A87C641}
@@ -39,7 +39,7 @@ To make that easier to review the [KnownFolders_ID_Guid.md](KnownFolders_ID_Guid
 |`FOLDERID_StartMenu`  |`0x625B53C3 0xAB48 0x4EC1 0xBA 0x1F 0xA1 0xEF 0x41 0x46 0xFC 0x19`|`{625B53C3-AB48-4EC1-BA1F-A1EF4146FC19}`|
 |`FOLDERID_Documents`  |`0xFDD39AD0 0x238F 0x46AF 0xAD 0xB4 0x6C 0x85 0x48 0x03 0x69 0xC7`|`{FDD39AD0-238F-46AF-ADB4-6C85480369C7}`|
 
-Down farther is another list with the C Hex 0x### in Clarion ###h format:
+Down farther is another list with the C Hex 0x### in Clarion ###h format. These Hex values were used in the Known Folders class to call SetGuid().
 
 | Known Folder Define  | GUID Split into Integer Parameters Clarion Syntax                          | GUID                                   |
 |--------------------- |----------------------------------------------------------------------------|----------------------------------------|
