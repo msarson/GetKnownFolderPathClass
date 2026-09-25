@@ -20,31 +20,31 @@ KnownFolders.h in the SDK has the code to define the ID's from the GUID's for C 
 
 ```cpp
 // {B4BFCC3A-DB2C-424C-B029-7FE99A87C641}
-DEFINE_KNOWN_FOLDER(FOLDERID_Desktop,             0xB4BFCC3A, 0xDB2C, 0x424C, 0xB0, 0x29, 0x7F, 0xE9, 0x9A, 0x87, 0xC6, 0x41);
+DEFINE_KNOWN_FOLDER(FOLDERID_Desktop,     0xB4BFCC3A, 0xDB2C, 0x424C, 0xB0, 0x29, 0x7F, 0xE9, 0x9A, 0x87, 0xC6, 0x41);
 // {A77F5D77-2E2B-44C3-A6A2-ABA601054A51}
-DEFINE_KNOWN_FOLDER(FOLDERID_Programs,            0xA77F5D77, 0x2E2B, 0x44C3, 0xA6, 0xA2, 0xAB, 0xA6, 0x01, 0x05, 0x4A, 0x51);
+DEFINE_KNOWN_FOLDER(FOLDERID_Programs,    0xA77F5D77, 0x2E2B, 0x44C3, 0xA6, 0xA2, 0xAB, 0xA6, 0x01, 0x05, 0x4A, 0x51);
 // {625B53C3-AB48-4EC1-BA1F-A1EF4146FC19}
-DEFINE_KNOWN_FOLDER(FOLDERID_StartMenu,           0x625B53C3, 0xAB48, 0x4EC1, 0xBA, 0x1F, 0xA1, 0xEF, 0x41, 0x46, 0xFC, 0x19);
+DEFINE_KNOWN_FOLDER(FOLDERID_StartMenu,   0x625B53C3, 0xAB48, 0x4EC1, 0xBA, 0x1F, 0xA1, 0xEF, 0x41, 0x46, 0xFC, 0x19);
 // {FDD39AD0-238F-46AF-ADB4-6C85480369C7}
-DEFINE_KNOWN_FOLDER(FOLDERID_Documents,           0xFDD39AD0, 0x238F, 0x46AF, 0xAD, 0xB4, 0x6C, 0x85, 0x48, 0x03, 0x69, 0xC7);
+DEFINE_KNOWN_FOLDER(FOLDERID_Documents,   0xFDD39AD0, 0x238F, 0x46AF, 0xAD, 0xB4, 0x6C, 0x85, 0x48, 0x03, 0x69, 0xC7);
 ```
 
 To make that easier to review the [KnownFolders_ID_Guid.md](KnownFolders_ID_Guid.md) markdown file organizes that into a single row like below:
-| Known Folder Define  | GUID Split into Integer Parameters C/C++ Style                     | GUID                                   |
-|----------------------|--------------------------------------------------------------------|----------------------------------------|
-|`FOLDERID_Desktop`    |`(0xB4BFCC3A 0xDB2C 0x424C 0xB0 0x29 0x7F 0xE9 0x9A 0x87 0xC6 0x41)`|`{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}`|
-|`FOLDERID_Programs`   |`(0xA77F5D77 0x2E2B 0x44C3 0xA6 0xA2 0xAB 0xA6 0x01 0x05 0x4A 0x51)`|`{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}`|
-|`FOLDERID_StartMenu`  |`(0x625B53C3 0xAB48 0x4EC1 0xBA 0x1F 0xA1 0xEF 0x41 0x46 0xFC 0x19)`|`{625B53C3-AB48-4EC1-BA1F-A1EF4146FC19}`|
-|`FOLDERID_Documents`  |`(0xFDD39AD0 0x238F 0x46AF 0xAD 0xB4 0x6C 0x85 0x48 0x03 0x69 0xC7)`|`{FDD39AD0-238F-46AF-ADB4-6C85480369C7}`|
+| Known Folder Define  | GUID Split into Integer Parameters C/C++ Style                   | GUID                                   |
+|----------------------|------------------------------------------------------------------|----------------------------------------|
+|`FOLDERID_Desktop`    |`0xB4BFCC3A 0xDB2C 0x424C 0xB0 0x29 0x7F 0xE9 0x9A 0x87 0xC6 0x41`|`{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}`|
+|`FOLDERID_Programs`   |`0xA77F5D77 0x2E2B 0x44C3 0xA6 0xA2 0xAB 0xA6 0x01 0x05 0x4A 0x51`|`{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}`|
+|`FOLDERID_StartMenu`  |`0x625B53C3 0xAB48 0x4EC1 0xBA 0x1F 0xA1 0xEF 0x41 0x46 0xFC 0x19`|`{625B53C3-AB48-4EC1-BA1F-A1EF4146FC19}`|
+|`FOLDERID_Documents`  |`0xFDD39AD0 0x238F 0x46AF 0xAD 0xB4 0x6C 0x85 0x48 0x03 0x69 0xC7`|`{FDD39AD0-238F-46AF-ADB4-6C85480369C7}`|
 
 Down farther is another list with the C Hex 0x### in Clarion ###h format:
 
-| Known Folder Define             | GUID Split into Integer Parameters Clarion Syntax                            | GUID                                   |
-|---------------------------------|------------------------------------------------------------------------------|----------------------------------------|
-|`FOLDERID_Desktop`               |`(0B4BFCC3Ah, 0DB2Ch, 0424Ch, 0B0h, 029h, 07Fh, 0E9h, 09Ah, 087h, 0C6h, 041h)`|`{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}`|
-|`FOLDERID_Programs`              |`(0A77F5D77h, 02E2Bh, 044C3h, 0A6h, 0A2h, 0ABh, 0A6h, 001h, 005h, 04Ah, 051h)`|`{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}`|
-|`FOLDERID_StartMenu`             |`(0625B53C3h, 0AB48h, 04EC1h, 0BAh, 01Fh, 0A1h, 0EFh, 041h, 046h, 0FCh, 019h)`|`{625B53C3-AB48-4EC1-BA1F-A1EF4146FC19}`|
-|`FOLDERID_Documents`             |`(0FDD39AD0h, 0238Fh, 046AFh, 0ADh, 0B4h, 06Ch, 085h, 048h, 003h, 069h, 0C7h)`|`{FDD39AD0-238F-46AF-ADB4-6C85480369C7}`|
+| Known Folder Define  | GUID Split into Integer Parameters Clarion Syntax                          | GUID                                   |
+|--------------------- |----------------------------------------------------------------------------|----------------------------------------|
+|`FOLDERID_Desktop`    |`0B4BFCC3Ah, 0DB2Ch, 0424Ch, 0B0h, 029h, 07Fh, 0E9h, 09Ah, 087h, 0C6h, 041h`|`{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}`|
+|`FOLDERID_Programs`   |`0A77F5D77h, 02E2Bh, 044C3h, 0A6h, 0A2h, 0ABh, 0A6h, 001h, 005h, 04Ah, 051h`|`{A77F5D77-2E2B-44C3-A6A2-ABA601054A51}`|
+|`FOLDERID_StartMenu`  |`0625B53C3h, 0AB48h, 04EC1h, 0BAh, 01Fh, 0A1h, 0EFh, 041h, 046h, 0FCh, 019h`|`{625B53C3-AB48-4EC1-BA1F-A1EF4146FC19}`|
+|`FOLDERID_Documents`  |`0FDD39AD0h, 0238Fh, 046AFh, 0ADh, 0B4h, 06Ch, 085h, 048h, 003h, 069h, 0C7h`|`{FDD39AD0-238F-46AF-ADB4-6C85480369C7}`|
 
 ___
 ## CSIDL to Known Folder Map and Reverse
