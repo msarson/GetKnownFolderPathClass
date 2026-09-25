@@ -78,9 +78,9 @@ ___
 | `FOLDERID_ControlPanelFolder` | `CSIDL_CONTROLS` |
 | `FOLDERID_Cookies` | `CSIDL_COOKIES` |
 | `FOLDERID_Desktop` | `CSIDL_DESKTOP` |
-| Duplicate          | `CSIDL_DESKTOPDIRECTORY` |
+| *Duplicate*        | `CSIDL_DESKTOPDIRECTORY` |
 | `FOLDERID_Documents` | `CSIDL_MYDOCUMENTS`
-| Duplicate            | `CSIDL_PERSONAL` |
+| *Duplicate*          | `CSIDL_PERSONAL` |
 | `FOLDERID_Fonts` | `CSIDL_FONTS` |
 | `FOLDERID_History` | `CSIDL_HISTORY` |
 | `FOLDERID_InternetCache` | `CSIDL_INTERNET_CACHE` |
