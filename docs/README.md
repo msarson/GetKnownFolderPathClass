@@ -1,7 +1,9 @@
 ## KnownFolders.h from the Windows SDK
 
 
-The [Known Folder Table on MSDN](https://learn.microsoft.com/en-us/windows/win32/shell/knownfolderid) shows 100+ vertical tables of 7 items (Constant, Display Name, Folder Type, Default Path, CSIDL Equivalent, Legacy Display Name, Legacy Default Path)) for each of the 100+ Folder ID's. That can be viewed here in a [single  markdown table transposed](MsdnKnownFoldFormatted.md) with some help from Gemini.
+The [Known Folder Table on MSDN](https://learn.microsoft.com/en-us/windows/win32/shell/knownfolderid) shows 100+ vertical tables of 7 items (Constant, Display Name, Folder Type, Default Path, CSIDL Equivalent, Legacy Display Name, Legacy Default Path)) for each of the 100+ Folder ID's. 
+
+Click on this link to view a [single markdown table transposed into colmums](MsdnKnownFoldFormatted.md) a sample of 4 rows appears below:
 
 | Constant           | Display Name| Folder Type | Default Path                                     | CSIDL Equivalent                       | Legacy Display Name | Legacy Default Path                |
 | :------------------| :-----------| :---------- | :------------------------------------------------| :--------------------------------------| :-------------------| :----------------------------------|
